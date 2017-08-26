@@ -17,15 +17,17 @@ var capitalPlanets = planets.map(function (planet){
 console.log('capitalPlanets', capitalPlanets);
 
 // Use the filter method to create a new array that contains planets with the letter 'e'
-var planetsWithE = planets.filter(function(){
+var planetsWithE = planets.filter(function(planets){
   return planets.indexOf("e") > -1;
 });
-
 console.log('planets containing letter E', planetsWithE);
 
-
 // Use the reduce method to create a sentence from the words in the following array
-
 var words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"];
+function makeSentence(total, currentVal) {
+  return total + " " + currentVal;
+}
+var wordsReduced = words.reduce(makeSentence);
+console.log('wordz', wordsReduced);
 
 
